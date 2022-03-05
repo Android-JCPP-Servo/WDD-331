@@ -83,30 +83,46 @@ img {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-.innerGrid {
+.mainGrid {
   display: grid;
-  margin: 10px;
-  @include MQ(S) {
-    margin: 0;
-  }
-  div {
-    // border: 1px solid #b9b9b9;
+  font-family: $font-fam;
+  // div {
+  //   border: 1px solid #b9b9b9;
+  // }
+  .innerGrid {
     display: grid;
-    align-items: center;
-    .tile {
-      width: 100%;
-      height: auto;
-      border: 1px solid #b9b9b9;
-      margin: 10px 0;
-      div {
-        padding: 7.5px;
-        color: $link-blue;
+    margin: 10px;
+    @include MQ(S) {
+      margin: 0;
+    }
+    div {
+      // border: 1px solid #b9b9b9;
+      display: grid;
+      align-items: center;
+      .tile {
+        width: 100%;
+        height: auto;
+        border: 1px solid #b9b9b9;
+        margin: 10px 0;
+        div {
+          padding: 7.5px;
+          color: $link-blue;
+        }
       }
     }
   }
-}
-.largeImg {
-  grid-column: 1 / 4;
+  @include MQ(S) {
+    grid-template-columns: 1fr 3fr 2fr 1fr;
+    grid-gap: 2vw;
+    height: 15vh;
+    .innerGrid {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2vw;
+    }
+    .largeImg {
+      grid-column: 1 / 4;
+    }
+  }
 }
 .section_2 {
   .largeImg {
@@ -127,22 +143,7 @@ img {
   }
 }
 main {
-  display: grid;
-  grid-template-columns: 1fr;
   padding: 15px 0;
-}
-.mainGrid {
-  display: grid;
-  font-family: $font-fam;
-  @include MQ(S) {
-    grid-template-columns: 1fr 3fr 2fr 1fr;
-    grid-gap: 2vw;
-    height: 15vh;
-    .innerGrid {
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 2vw;
-    }
-  }
 }
 .innerAside {
   margin: 10px;
