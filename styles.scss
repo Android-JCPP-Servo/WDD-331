@@ -112,7 +112,7 @@ img {
     }
   }
   @include MQ(S) {
-    grid-template-columns: 1fr 3fr 2fr 1fr;
+    grid-template-columns: 1fr 3fr 1.5fr 1fr;
     grid-gap: 2vw;
     height: 15vh;
     .innerGrid {
@@ -124,7 +124,7 @@ img {
     }
   }
 }
-.section_2 {
+.inner_2 {
   .largeImg {
     border-top: 1px solid #b9b9b9;
     display: grid;
@@ -191,5 +191,30 @@ main {
       display: grid;
       grid-template-columns: 1fr .5fr 2fr;
     }
+  }
+}
+.aside_2 {
+  border: 1px solid #b9b9b9;
+  border-radius: 10px;
+  img {
+    border-radius: 10px 10px 0 0;
+  }
+  div {
+    padding: 15px 20px;
+    .link {
+      color: $link-blue;
+    }
+    p {
+      margin: 10px 0;
+    }
+  }
+  button {
+    background-color: $byui-blue;
+    margin: 5px auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-family: $font-fam;
+    color: white;
   }
 }

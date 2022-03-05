@@ -838,7 +838,7 @@ img {
           color: #0076b6; }
   @media only screen and (min-width: 48em) {
     .mainGrid {
-      grid-template-columns: 1fr 3fr 2fr 1fr;
+      grid-template-columns: 1fr 3fr 1.5fr 1fr;
       grid-gap: 2vw;
       height: 15vh; }
       .mainGrid .innerGrid {
@@ -847,16 +847,16 @@ img {
       .mainGrid .largeImg {
         grid-column: 1 / 4; } }
 
-.section_2 .largeImg {
+.inner_2 .largeImg {
   border-top: 1px solid #b9b9b9;
   display: grid;
   align-content: top;
   grid-template-columns: 1fr 3fr;
   grid-gap: 25px;
   padding: 10px 0; }
-  .section_2 .largeImg .link {
+  .inner_2 .largeImg .link {
     color: #0076b6; }
-  .section_2 .largeImg div {
+  .inner_2 .largeImg div {
     height: 100%;
     display: grid;
     align-items: start; }
@@ -899,5 +899,25 @@ main {
     border-bottom: 1px solid #b9b9b9;
     display: grid;
     grid-template-columns: 1fr .5fr 2fr; }
+
+.aside_2 {
+  border: 1px solid #b9b9b9;
+  border-radius: 10px; }
+  .aside_2 img {
+    border-radius: 10px 10px 0 0; }
+  .aside_2 div {
+    padding: 15px 20px; }
+    .aside_2 div .link {
+      color: #0076b6; }
+    .aside_2 div p {
+      margin: 10px 0; }
+  .aside_2 button {
+    background-color: #056cb6;
+    margin: 5px auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-family: "BYUI Open Sans";
+    color: white; }
 
 /*# sourceMappingURL=styles.css.map */
