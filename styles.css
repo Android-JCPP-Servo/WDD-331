@@ -826,9 +826,10 @@ img {
       .mainGrid .innerGrid {
         margin: 0; } }
     .mainGrid .innerGrid div {
-      display: grid;
-      align-items: center; }
+      display: grid; }
       .mainGrid .innerGrid div .tile {
+        display: grid;
+        align-items: center;
         width: 100%;
         height: auto;
         border: 1px solid #b9b9b9;
@@ -850,14 +851,13 @@ img {
 .inner_2 .largeImg {
   border-top: 1px solid #b9b9b9;
   display: grid;
-  align-content: top;
+  align-items: start;
   grid-template-columns: 1fr 3fr;
   grid-gap: 25px;
   padding: 10px 0; }
   .inner_2 .largeImg .link {
     color: #0076b6; }
   .inner_2 .largeImg div {
-    height: 100%;
     display: grid;
     align-items: start; }
 
