@@ -898,13 +898,32 @@ main {
     border-radius: 5px;
     border: 1px solid #b4b3b5;
     padding: 5px 10px;
-    font-weight: bold; }
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 2fr 1fr; }
+    .innerAside .getTile .down_arrow {
+      grid-column: 2 / 3;
+      display: grid;
+      align-content: center;
+      justify-content: right; }
+      .innerAside .getTile .down_arrow img {
+        width: 15px; }
   .innerAside .resources div {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     border-bottom: 1px solid #b4b3b5;
     border-left: 1px solid #b4b3b5;
     border-right: 1px solid #b4b3b5;
     margin: 0;
     padding: 5px 10px; }
+    .innerAside .resources div .down_arrow {
+      display: grid;
+      align-content: center;
+      justify-content: right;
+      grid-column: 2 / 3; }
+      .innerAside .resources div .down_arrow img {
+        width: 15px;
+        transform: rotate(-90deg); }
   .innerAside .resources div:nth-child(1) {
     background-color: #727272;
     color: white;

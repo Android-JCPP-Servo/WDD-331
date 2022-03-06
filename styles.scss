@@ -179,14 +179,33 @@ main {
     border: $border;
     padding: 5px 10px;
     font-weight: bold;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    .down_arrow {
+      @include grid_span(2, 3);
+      @include grid(grid, center, right);
+      img {
+        width: 15px;
+      }
+    }
   }
   .resources {
     div {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
       border-bottom: $border;
       border-left: $border;
       border-right: $border;
       margin: 0;
       padding: 5px 10px;
+      .down_arrow {
+        @include grid(grid, center, right);
+        @include grid_span(2, 3);
+        img {
+          width: 15px;
+          transform: rotate(-90deg);
+        }
+      }
     }
     div:nth-child(1) {
       background-color: $dark-gray;
