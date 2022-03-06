@@ -261,3 +261,12 @@ main {
     color: white;
   }
 }
+.taylor {
+  @include grid_span(1, 5);
+  @include grid(grid, center, center);
+  padding: 0;
+  margin: 0;
+  img {
+    width: 175px;
+  }
+}

@@ -966,4 +966,14 @@ main {
     font-family: "BYUI Open Sans";
     color: white; }
 
+.taylor {
+  grid-column: 1 / 5;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0; }
+  .taylor img {
+    width: 175px; }
+
 /*# sourceMappingURL=styles.css.map */
