@@ -841,8 +841,7 @@ img {
   border: 0; }
 
 .mainGrid {
-  display: grid;
-  font-family: "BYUI Open Sans"; }
+  display: grid; }
   .mainGrid .innerGrid {
     display: grid;
     margin: 10px; }
@@ -901,6 +900,8 @@ img {
 
 main {
   padding: 15px 0; }
+  main * {
+    font-family: "BYUI Open Sans"; }
 
 .innerAside {
   margin: 10px; }
@@ -980,7 +981,6 @@ main {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    font-family: "BYUI Open Sans";
     color: white; }
 
 .newsButton {
@@ -994,7 +994,6 @@ main {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    font-family: "BYUI Open Sans";
     color: white; }
   @media only screen and (min-width: 48em) {
     .newsButton {

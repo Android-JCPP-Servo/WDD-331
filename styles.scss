@@ -111,7 +111,6 @@ img {
 }
 .mainGrid {
   display: grid;
-  font-family: $font-fam;
   .innerGrid {
     display: grid;
     margin: 10px;
@@ -183,6 +182,9 @@ img {
 }
 main {
   padding: 15px 0;
+  * {
+    font-family: $font-fam;
+  }
 }
 .innerAside {
   margin: 10px;
@@ -277,7 +279,6 @@ main {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    font-family: $font-fam;
     color: white;
   }
 }
@@ -290,7 +291,6 @@ main {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    font-family: $font-fam;
     color: white;
   }
   @include MQ(S) {
