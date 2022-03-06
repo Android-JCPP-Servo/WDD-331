@@ -111,9 +111,11 @@ img {
 .mainGrid {
   display: grid;
   font-family: $font-fam;
+  div {
+    border: 1px solid #b9b9b9;
+  }
   .innerGrid {
     display: grid;
-    @include grid_span(2, 3);
     margin: 10px;
     div {
       .tile {
@@ -122,21 +124,19 @@ img {
         height: auto;
         margin: 10px 0;
         div {
-          border: $border;
+          border: 1px solid #b9b9b9;
           padding: 7.5px;
           color: $link-blue;
         }
       }
     }
   }
-  aside {
-    @include grid_span(3, 4);
-  }
   @include MQ(S) {
     grid-template-columns: 1fr 3fr 1.5fr 1fr;
     grid-gap: 2vw;
-    margin-top: 2vh;
+    margin: 2.5vh 0;
     .innerGrid {
+      @include grid_span(2, 3);
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 2vw;
       margin: 0;
@@ -144,13 +144,12 @@ img {
     .largeImg {
       @include grid_span(1, 4);
     }
+    .aside {
+      @include grid_span(3, 4);
+    }
   }
 }
-.date {
-  font-size: 12px;
-}
 .inner_2 {
-  position: relative;
   .largeImg {
     border-top: 1px solid #b9b9b9;
     display: grid;
@@ -163,11 +162,6 @@ img {
     }
     div {
       @include grid(grid, start, null);
-    }
-    .description {
-      p {
-        margin: 5px 0;
-      }
     }
   }
 }
@@ -183,17 +177,13 @@ main {
     margin-bottom: 10px;
   }
   .getTile {
-    background-color: $light-gray;
-    border: $border;
-    border-radius: 5px;
+    background-color: $med-gray;
     padding: 5px 10px;
     font-weight: bold;
   }
   .resources {
     div {
-      border-bottom: $border;
-      border-left: $border;
-      border-right: $border;
+      border: 1px solid #b9b9b9;
       margin: 0;
       padding: 5px 10px;
     }
@@ -251,9 +241,9 @@ main {
   }
 }
 .newsButton {
-  @include grid(grid, center, center);
+  @include grid(grid, center, right);
+  padding-right: 15px;
   .button {
-    @include grid_span(3, 4);
     background-color: $byui-blue;
     margin: 5px auto;
     padding: 10px 20px;
@@ -262,13 +252,21 @@ main {
     font-family: $font-fam;
     color: white;
   }
+  @include MQ(S) {
+    @include grid_span(2, 3);
+    .button {
+      @include grid_span(3, 4);
+    }
+  }
 }
 .taylor {
-  @include grid_span(1, 5);
   @include grid(grid, center, center);
   padding: 0;
   margin: 0;
   img {
     width: 175px;
+  }
+  @include MQ(S) {
+    @include grid_span(1, 5);    
   }
 }

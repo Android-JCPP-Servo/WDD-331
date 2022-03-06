@@ -842,9 +842,10 @@ img {
 .mainGrid {
   display: grid;
   font-family: "BYUI Open Sans"; }
+  .mainGrid div {
+    border: 1px solid #b9b9b9; }
   .mainGrid .innerGrid {
     display: grid;
-    grid-column: 2 / 3;
     margin: 10px; }
     .mainGrid .innerGrid div .tile {
       display: grid;
@@ -853,42 +854,36 @@ img {
       height: auto;
       margin: 10px 0; }
       .mainGrid .innerGrid div .tile div {
-        border: 1px solid #b4b3b5;
+        border: 1px solid #b9b9b9;
         padding: 7.5px;
         color: #0076b6; }
-  .mainGrid aside {
-    grid-column: 3 / 4; }
   @media only screen and (min-width: 48em) {
     .mainGrid {
       grid-template-columns: 1fr 3fr 1.5fr 1fr;
       grid-gap: 2vw;
-      margin-top: 2vh; }
+      margin: 2.5vh 0; }
       .mainGrid .innerGrid {
+        grid-column: 2 / 3;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 2vw;
         margin: 0; }
       .mainGrid .largeImg {
-        grid-column: 1 / 4; } }
+        grid-column: 1 / 4; }
+      .mainGrid .aside {
+        grid-column: 3 / 4; } }
 
-.date {
-  font-size: 12px; }
-
-.inner_2 {
-  position: relative; }
-  .inner_2 .largeImg {
-    border-top: 1px solid #b9b9b9;
+.inner_2 .largeImg {
+  border-top: 1px solid #b9b9b9;
+  display: grid;
+  align-items: start;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 25px;
+  padding: 10px 0; }
+  .inner_2 .largeImg .link {
+    color: #0076b6; }
+  .inner_2 .largeImg div {
     display: grid;
-    align-items: start;
-    grid-template-columns: 1fr 3fr;
-    grid-gap: 25px;
-    padding: 10px 0; }
-    .inner_2 .largeImg .link {
-      color: #0076b6; }
-    .inner_2 .largeImg div {
-      display: grid;
-      align-content: start; }
-    .inner_2 .largeImg .description p {
-      margin: 5px 0; }
+    align-content: start; }
 
 main {
   padding: 15px 0; }
@@ -901,15 +896,11 @@ main {
   .innerAside div {
     margin-bottom: 10px; }
   .innerAside .getTile {
-    background-color: #eaeaea;
-    border: 1px solid #b4b3b5;
-    border-radius: 5px;
+    background-color: #b4b3b5;
     padding: 5px 10px;
     font-weight: bold; }
   .innerAside .resources div {
-    border-bottom: 1px solid #b4b3b5;
-    border-left: 1px solid #b4b3b5;
-    border-right: 1px solid #b4b3b5;
+    border: 1px solid #b9b9b9;
     margin: 0;
     padding: 5px 10px; }
   .innerAside .resources div:nth-child(1) {
@@ -956,9 +947,9 @@ main {
 .newsButton {
   display: grid;
   align-content: center;
-  justify-content: center; }
+  justify-content: right;
+  padding-right: 15px; }
   .newsButton .button {
-    grid-column: 3 / 4;
     background-color: #056cb6;
     margin: 5px auto;
     padding: 10px 20px;
@@ -966,9 +957,13 @@ main {
     border-radius: 5px;
     font-family: "BYUI Open Sans";
     color: white; }
+  @media only screen and (min-width: 48em) {
+    .newsButton {
+      grid-column: 2 / 3; }
+      .newsButton .button {
+        grid-column: 3 / 4; } }
 
 .taylor {
-  grid-column: 1 / 5;
   display: grid;
   align-content: center;
   justify-content: center;
@@ -976,5 +971,8 @@ main {
   margin: 0; }
   .taylor img {
     width: 175px; }
+  @media only screen and (min-width: 48em) {
+    .taylor {
+      grid-column: 1 / 5; } }
 
 /*# sourceMappingURL=styles.css.map */
