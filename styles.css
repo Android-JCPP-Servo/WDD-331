@@ -760,15 +760,6 @@
 .icon-youtube:before {
   content: '\e9f2'; }
 
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0; }
-
 .site-banner {
   background-color: #056cb6;
   display: grid;
@@ -1012,5 +1003,14 @@ main {
   @media only screen and (min-width: 48em) {
     .taylor {
       grid-column: 1 / 5; } }
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
 
 /*# sourceMappingURL=styles.css.map */
