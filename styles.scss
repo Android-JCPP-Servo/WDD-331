@@ -29,8 +29,7 @@ $font-fam: 'BYUI Open Sans';
   left: $left;
 }
 @mixin grid_span($start, $end) {
-  grid-column-start: $start;
-  grid-column-end: $end;
+  grid-column: #{$start} / #{$end};
 }
 
 // Utility classes
@@ -120,18 +119,14 @@ img {
   .innerGrid {
     display: grid;
     margin: 10px;
-    @include MQ(S) {
-      margin: 0;
-    }
     div {
       .tile {
-        display: grid;
-        align-items: center;
+        @include grid(grid, center, null);
         width: 100%;
         height: auto;
-        border: 1px solid #b9b9b9;
         margin: 10px 0;
         div {
+          border: 1px solid #b9b9b9;
           padding: 7.5px;
           color: $link-blue;
         }
@@ -141,13 +136,14 @@ img {
   @include MQ(S) {
     grid-template-columns: 1fr 3fr 1.5fr 1fr;
     grid-gap: 2vw;
-    height: 15vh;
+    margin: 2.5vh 0;
     .innerGrid {
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 2vw;
+      margin: 0;
     }
     .largeImg {
-      grid-column: 1 / 4;
+      @include grid_span(1, 4);
     }
   }
 }
@@ -163,8 +159,7 @@ img {
       color: $link-blue;
     }
     div {
-      display: grid;
-      align-items: start;
+      @include grid(grid, start, null);
     }
   }
 }
@@ -204,8 +199,7 @@ main {
     div {
       margin: 0;
       padding: 5px 10px;
-      display: flex;
-      align-items: center;
+      @include grid(grid, center, null);
     }
     .title {
       background-color: $byui-blue;
