@@ -136,7 +136,7 @@ img {
   @include MQ(S) {
     grid-template-columns: 1fr 3fr 1.5fr 1fr;
     grid-gap: 2vw;
-    margin: 2.5vh 0;
+    margin-top: 2vh;
     .innerGrid {
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 2vw;
@@ -148,6 +148,7 @@ img {
   }
 }
 .inner_2 {
+  position: relative;
   .largeImg {
     border-top: 1px solid #b9b9b9;
     display: grid;
@@ -229,6 +230,20 @@ main {
     }
   }
   button {
+    background-color: $byui-blue;
+    margin: 5px auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-family: $font-fam;
+    color: white;
+  }
+}
+.newsButton {
+  @include grid(grid, center, center);
+  position: absolute;
+  @include position(null, 0, 0, null);
+  .button {
     background-color: $byui-blue;
     margin: 5px auto;
     padding: 10px 20px;
