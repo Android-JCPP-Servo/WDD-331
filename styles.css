@@ -772,11 +772,13 @@
 .site-banner {
   background-color: #056cb6;
   display: grid;
-  grid-template-columns: 1fr 3fr 1.5fr 1fr;
-  grid-gap: 2vw;
   align-content: center;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2vw;
   height: 15vh;
   position: relative; }
+  .site-banner__left, .site-banner__right {
+    border-top: 1px solid black; }
   .site-banner__left {
     grid-column-start: 1;
     grid-column-end: 2; }
@@ -784,22 +786,22 @@
       display: grid;
       align-content: center;
       justify-content: center;
+      top: 0;
+      bottom: 50%;
+      left: 0;
       background-color: black;
       position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 50%;
       width: 100px;
       font-size: 40px; }
     .site-banner__left h1 {
       display: grid;
       align-content: center;
-      background-color: #b4b3b5;
-      position: absolute;
       top: 50%;
-      left: 0;
       right: 0;
       bottom: 0;
+      left: 0;
+      background-color: #b4b3b5;
+      position: absolute;
       color: black;
       text-align: right;
       padding: 0 15px; }
@@ -810,11 +812,13 @@
     display: grid;
     align-content: center;
     justify-content: center;
-    grid-template-columns: repeat(3, 1fr);
-    position: absolute;
     top: 0;
     right: 0;
     bottom: 50%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-template-columns: repeat(3, 1fr);
+    position: absolute;
     width: 150px;
     text-align: center;
     padding-right: 15px; }
@@ -842,24 +846,24 @@ img {
 .mainGrid {
   display: grid;
   font-family: "BYUI Open Sans"; }
+  .mainGrid div {
+    border: 1px solid #b9b9b9; }
   .mainGrid .innerGrid {
     display: grid;
     margin: 10px; }
     @media only screen and (min-width: 48em) {
       .mainGrid .innerGrid {
         margin: 0; } }
-    .mainGrid .innerGrid div {
-      display: grid; }
-      .mainGrid .innerGrid div .tile {
-        display: grid;
-        align-items: center;
-        width: 100%;
-        height: auto;
-        border: 1px solid #b9b9b9;
-        margin: 10px 0; }
-        .mainGrid .innerGrid div .tile div {
-          padding: 7.5px;
-          color: #0076b6; }
+    .mainGrid .innerGrid div .tile {
+      display: grid;
+      align-items: center;
+      width: 100%;
+      height: auto;
+      border: 1px solid #b9b9b9;
+      margin: 10px 0; }
+      .mainGrid .innerGrid div .tile div {
+        padding: 7.5px;
+        color: #0076b6; }
   @media only screen and (min-width: 48em) {
     .mainGrid {
       grid-template-columns: 1fr 3fr 1.5fr 1fr;
