@@ -62,6 +62,7 @@ $border: 1px solid $med-gray;
       font-size: 40px;
     }
     h1 {
+      font-family: $font-fam;
       @include grid(grid, center, null);
       @include position(50%, 0, 0, 0);
       @include MQ(S) {
@@ -215,7 +216,8 @@ main {
       border-left: $border;
       border-right: $border;
       margin: 0;
-      padding: 5px 10px;
+      padding: 10px 15px;
+      background-color: $light-gray;
       .down_arrow {
         @include grid(grid, center, right);
         @include grid_span(2, 3);
@@ -228,7 +230,7 @@ main {
     div:nth-child(1) {
       background-color: $dark-gray;
       color: white;
-      font-weight: bold;
+      font-size: 20px;
     }
     a {
       color: $link-blue;
@@ -238,13 +240,14 @@ main {
   .dates {
     div {
       margin: 0;
-      padding: 5px 10px;
+      padding: 5px 7.5px;
       @include grid(grid, center, null);
     }
     .title {
+      padding: 10px 15px;
       background-color: $byui-blue;
       color: white;
-      font-weight: bold;
+      font-size: 20px;
     }
     .dateGrid {
       border-bottom: 1px solid #b9b9b9;

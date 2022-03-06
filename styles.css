@@ -791,6 +791,7 @@
       width: 100px;
       font-size: 40px; }
     .site-banner__left h1 {
+      font-family: "BYUI Open Sans";
       display: grid;
       align-content: center;
       top: 50%;
@@ -930,7 +931,8 @@ main {
     border-left: 1px solid #b4b3b5;
     border-right: 1px solid #b4b3b5;
     margin: 0;
-    padding: 5px 10px; }
+    padding: 10px 15px;
+    background-color: #eaeaea; }
     .innerAside .resources div .down_arrow {
       display: grid;
       align-content: center;
@@ -942,19 +944,20 @@ main {
   .innerAside .resources div:nth-child(1) {
     background-color: #727272;
     color: white;
-    font-weight: bold; }
+    font-size: 20px; }
   .innerAside .resources a {
     color: #0076b6;
     text-decoration: none; }
   .innerAside .dates div {
     margin: 0;
-    padding: 5px 10px;
+    padding: 5px 7.5px;
     display: grid;
     align-content: center; }
   .innerAside .dates .title {
+    padding: 10px 15px;
     background-color: #056cb6;
     color: white;
-    font-weight: bold; }
+    font-size: 20px; }
   .innerAside .dates .dateGrid {
     border-bottom: 1px solid #b9b9b9;
     display: grid;
