@@ -36,15 +36,18 @@ $font-fam: 'BYUI Open Sans';
 .site-banner {
   background-color: $byui-blue;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 3fr 1.5fr 1fr;
+  grid-gap: 2vw;
   align-content: center;
-  border: 1px solid black;
+  // border: 1px solid black;
   height: 15vh;
   position: relative;
-  &__left, &__right {
-    border: 1px solid black;
-  }
+  // &__left, &__right {
+  //   border: 1px solid black;
+  // }
   &__left {
+    grid-column-start: 1;
+    grid-column-end: 2;
     span {
       @include grid(grid, center, center);
       background-color: black;
@@ -69,6 +72,20 @@ $font-fam: 'BYUI Open Sans';
         text-align: left;
       }
       padding: 0 15px;
+    }
+  }
+  &__right {
+    @include grid(grid, center, center);
+    grid-template-columns: repeat(3, 1fr);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 50%;
+    width: 150px;
+    text-align: center;
+    padding-right: 15px;
+    .mobile-header-icon {
+      font-size: 30px;
     }
   }
   // &__left, &__right {
@@ -122,9 +139,9 @@ img {
 .mainGrid {
   display: grid;
   font-family: $font-fam;
-  div {
-    border: 1px solid #b9b9b9;
-  }
+  // div {
+  //   border: 1px solid #b9b9b9;
+  // }
   .innerGrid {
     display: grid;
     margin: 10px;
