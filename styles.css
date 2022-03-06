@@ -842,8 +842,6 @@ img {
 .mainGrid {
   display: grid;
   font-family: "BYUI Open Sans"; }
-  .mainGrid div {
-    border: 1px solid #b9b9b9; }
   .mainGrid .innerGrid {
     display: grid;
     margin: 10px; }
@@ -854,7 +852,7 @@ img {
       height: auto;
       margin: 10px 0; }
       .mainGrid .innerGrid div .tile div {
-        border: 1px solid #b9b9b9;
+        border: 1px solid #b4b3b5;
         padding: 7.5px;
         color: #0076b6; }
   @media only screen and (min-width: 48em) {
@@ -896,11 +894,15 @@ main {
   .innerAside div {
     margin-bottom: 10px; }
   .innerAside .getTile {
-    background-color: #b4b3b5;
+    background-color: #eaeaea;
+    border-radius: 5px;
+    border: 1px solid #b4b3b5;
     padding: 5px 10px;
     font-weight: bold; }
   .innerAside .resources div {
-    border: 1px solid #b9b9b9;
+    border-bottom: 1px solid #b4b3b5;
+    border-left: 1px solid #b4b3b5;
+    border-right: 1px solid #b4b3b5;
     margin: 0;
     padding: 5px 10px; }
   .innerAside .resources div:nth-child(1) {

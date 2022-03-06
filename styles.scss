@@ -111,9 +111,6 @@ img {
 .mainGrid {
   display: grid;
   font-family: $font-fam;
-  div {
-    border: 1px solid #b9b9b9;
-  }
   .innerGrid {
     display: grid;
     margin: 10px;
@@ -124,7 +121,7 @@ img {
         height: auto;
         margin: 10px 0;
         div {
-          border: 1px solid #b9b9b9;
+          border: $border;
           padding: 7.5px;
           color: $link-blue;
         }
@@ -177,13 +174,17 @@ main {
     margin-bottom: 10px;
   }
   .getTile {
-    background-color: $med-gray;
+    background-color: $light-gray;
+    border-radius: 5px;
+    border: $border;
     padding: 5px 10px;
     font-weight: bold;
   }
   .resources {
     div {
-      border: 1px solid #b9b9b9;
+      border-bottom: $border;
+      border-left: $border;
+      border-right: $border;
       margin: 0;
       padding: 5px 10px;
     }
