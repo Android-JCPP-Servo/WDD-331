@@ -853,7 +853,7 @@ img {
       height: auto;
       margin: 10px 0; }
       .mainGrid .innerGrid div .tile div {
-        border: 1px solid #b9b9b9;
+        border: 1px solid #b4b3b5;
         padding: 7.5px;
         color: #0076b6; }
   .mainGrid aside {
@@ -901,11 +901,15 @@ main {
   .innerAside div {
     margin-bottom: 10px; }
   .innerAside .getTile {
-    background-color: #b4b3b5;
+    background-color: #eaeaea;
+    border: 1px solid #b4b3b5;
+    border-radius: 5px;
     padding: 5px 10px;
     font-weight: bold; }
   .innerAside .resources div {
-    border: 1px solid #b9b9b9;
+    border-bottom: 1px solid #b4b3b5;
+    border-left: 1px solid #b4b3b5;
+    border-right: 1px solid #b4b3b5;
     margin: 0;
     padding: 5px 10px; }
   .innerAside .resources div:nth-child(1) {
@@ -930,7 +934,7 @@ main {
     grid-template-columns: 1fr .5fr 2fr; }
 
 .aside_2 {
-  border: 1px solid #b9b9b9;
+  border: 1px solid #b4b3b5;
   border-radius: 10px; }
   .aside_2 img {
     border-radius: 10px 10px 0 0; }
