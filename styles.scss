@@ -147,6 +147,9 @@ img {
     }
   }
 }
+.date {
+  font-size: 12px;
+}
 .inner_2 {
   position: relative;
   .largeImg {
@@ -161,6 +164,11 @@ img {
     }
     div {
       @include grid(grid, start, null);
+    }
+    .description {
+      p {
+        margin: 5px 0;
+      }
     }
   }
 }

@@ -871,6 +871,9 @@ img {
       .mainGrid .largeImg {
         grid-column: 1 / 4; } }
 
+.date {
+  font-size: 12px; }
+
 .inner_2 {
   position: relative; }
   .inner_2 .largeImg {
@@ -885,6 +888,8 @@ img {
     .inner_2 .largeImg div {
       display: grid;
       align-content: start; }
+    .inner_2 .largeImg .description p {
+      margin: 5px 0; }
 
 main {
   padding: 15px 0; }
