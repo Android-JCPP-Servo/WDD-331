@@ -775,17 +775,36 @@
   grid-template-columns: 1fr 1fr;
   align-content: center;
   border: 1px solid black;
-  height: 7.5vh;
+  height: 15vh;
   position: relative; }
+  .site-banner__left, .site-banner__right {
+    border: 1px solid black; }
   .site-banner__left span {
     display: grid;
     align-content: center;
+    justify-content: center;
     background-color: black;
     position: absolute;
     top: 0;
     left: 0;
+    bottom: 50%;
+    width: 100px;
+    font-size: 40px; }
+  .site-banner__left h1 {
+    display: grid;
+    align-content: center;
+    background-color: #b4b3b5;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
     bottom: 0;
-    width: 5; }
+    color: black;
+    text-align: right;
+    padding: 0 15px; }
+    @media only screen and (min-width: 48em) {
+      .site-banner__left h1 {
+        text-align: left; } }
 
 .white-text * {
   color: white;
@@ -808,6 +827,8 @@ img {
 .mainGrid {
   display: grid;
   font-family: "BYUI Open Sans"; }
+  .mainGrid div {
+    border: 1px solid #b9b9b9; }
   .mainGrid .innerGrid {
     display: grid;
     margin: 10px; }

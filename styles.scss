@@ -17,6 +17,11 @@ $font-fam: 'BYUI Open Sans';
     @media only screen and (min-width: $sm-break) { @content; } 
   }
 }
+@mixin grid($type, $position_y, $position_x) {
+  display: $type;
+  align-content: $position_y;
+  justify-content: $position_x;
+}
 
 // Utility classes
 *,
@@ -34,18 +39,36 @@ $font-fam: 'BYUI Open Sans';
   grid-template-columns: 1fr 1fr;
   align-content: center;
   border: 1px solid black;
-  height: 7.5vh;
+  height: 15vh;
   position: relative;
+  &__left, &__right {
+    border: 1px solid black;
+  }
   &__left {
     span {
-      display: grid;
-      align-content: center;
+      @include grid(grid, center, center);
       background-color: black;
       position: absolute;
       top: 0;
       left: 0;
+      bottom: 50%;
+      width: 100px;
+      font-size: 40px;
+    }
+    h1 {
+      @include grid(grid, center, null);
+      background-color: #b4b3b5;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
       bottom: 0;
-      width: 5;
+      color: black;
+      text-align: right;
+      @include MQ(S) {
+        text-align: left;
+      }
+      padding: 0 15px;
     }
   }
   // &__left, &__right {
@@ -99,9 +122,9 @@ img {
 .mainGrid {
   display: grid;
   font-family: $font-fam;
-  // div {
-  //   border: 1px solid #b9b9b9;
-  // }
+  div {
+    border: 1px solid #b9b9b9;
+  }
   .innerGrid {
     display: grid;
     margin: 10px;
