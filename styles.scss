@@ -121,9 +121,19 @@ img {
         height: auto;
         margin: 10px 0;
         div {
+          display: grid;
+          grid-template-columns: 2fr 1fr;
           border: $border;
           padding: 7.5px;
           color: $link-blue;
+          .down_arrow {
+            @include grid(grid, center, right);
+            @include grid_span(2, 3);
+            img {
+              width: 15px;
+              transform: rotate(-90deg);
+            }
+          }
         }
       }
     }
@@ -146,6 +156,9 @@ img {
     }
   }
 }
+.date {
+  font-size: 12px;
+}
 .inner_2 {
   .largeImg {
     border-top: 1px solid #b9b9b9;
@@ -159,6 +172,11 @@ img {
     }
     div {
       @include grid(grid, start, null);
+    }
+    .description {
+      p {
+        margin: 5px 0;
+      }
     }
   }
 }
